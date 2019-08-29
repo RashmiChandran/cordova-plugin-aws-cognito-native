@@ -1,0 +1,19 @@
+{
+  "name": "AWSCognitoNative",
+  "version": "0.0.1",
+  "description": "Cordova plugin for integrating aws-cognito-ios sdk and aws-cognito-android-sdk",
+  "cordova": {
+    "id": "cordova-plugin-aws-cognito-native",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "rashmichandran",
+  "license": "MIT"
+}
