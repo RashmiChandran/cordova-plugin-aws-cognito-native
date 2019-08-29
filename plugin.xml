@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-aws-cognito-native" version="0.1.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AWSCognitoNative</name>
+    <js-module name="AWSCognitoNative" src="www/AWSCognitoNative.js">
+        <clobbers target="cordova.plugins.AWSCognitoNative" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AWSCognitoNative">
+                <param name="android-package" value="cordova-plugin-aws-cognito-native.AWSCognitoNative" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <framework custom="true" src="src/android/AWSCognitoNative-sdk.gradle" type="gradleReference" />
+        <source-file src="src/android/AWSCognitoNative.java" target-dir="src/cordova-plugin-aws-cognito-native/AWSCognitoNative" />
+    </platform>
+     <platform name="ios">
+    	<config-file parent="/*" target="config.xml">
+            <feature name="AWSCognitoNative">
+                <param name="ios-package" value="AWSCognitoNative" />
+            </feature>
+        </config-file>
+
+		<!-- frameworks -->
+		<framework src="AWSCore" type="podspec" spec=">= 2.5.3" />
+		<framework src="AWSCognito" type="podspec" spec=">= 2.5.3" />
+		<framework src="AWSCognitoIdentityProvider" type="podspec" spec=">= 2.5.3" />
+		<framework src="AWSLambda" type="podspec" spec=">= 2.5.3" />
+		<framework src="AWSAPIGateway" type="podspec" spec=">= 2.5.3" />
+	    <framework src="SystemConfiguration.framework" weak="true" />
+
+        <header-file src="src/ios/AWSCognitoNative.h" />
+        <header-file src="src/ios/Reachability.h" />
+        <source-file src="src/ios/AWSCognitoNative.m" />
+        <source-file src="src/ios/Reachability.m" />
+
+	</platform>
+</plugin>
