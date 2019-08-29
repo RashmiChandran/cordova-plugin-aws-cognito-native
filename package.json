@@ -9,6 +9,10 @@
       "ios"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RashmiChandran/cordova-plugin-aws-cognito-native.git"
+  },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
