@@ -1,0 +1,10 @@
+repositories{
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.15.+'
+}
+
+
